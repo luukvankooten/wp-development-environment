@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06f8bdafdfe803318378616fe2105bb1",
+    "content-hash": "3cc2a7f1e7f5cfae50923f7f7717b83b",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -636,6 +636,15 @@
                 "unicode"
             ],
             "time": "2019-11-13T10:30:21+00:00"
+        },
+        {
+            "name": "ibericode/mc4wp-premium",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "./plugins/mc4wp-premium"
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "justinrainbow/json-schema",

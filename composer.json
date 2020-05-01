@@ -3,12 +3,25 @@
         {
             "type":"composer",
             "url":"https://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ibericode/mc4wp-premium",
+                "version": "1.0.0",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "path",
+                    "url": "./plugins/mc4wp-premium"
+                }
+            }
         }
     ],
     "require": {
         "wp-cli/wp-cli-bundle": "*",
         "roots/wordpress": "^5.0",
-        "composer/installers": "^1.9"
+        "composer/installers": "^1.9",
+        "ibericode/mc4wp-premium": "^1.0"
     },
     "extra": {
         "wordpress-install-dir": "www",
