@@ -1,0 +1,26 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 2
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: ./
+        to: /home/vagrant/code
+sites:
+    -
+        map: ibericode.wp.test
+        to: /home/vagrant/code/www
+databases:
+    - wordpress
+features:
+    -
+        mariadb: false
+    -
+        ohmyzsh: true
+    -
+        webdriver: false
+name: homestead
+hostname: homestead
