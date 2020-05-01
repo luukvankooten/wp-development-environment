@@ -1,4 +1,5 @@
 {
+    "type": "project",
     "repositories":[
         {
             "type":"composer",
@@ -6,22 +7,59 @@
         },
         {
             "type": "package",
-            "package": {
-                "name": "ibericode/mc4wp-premium",
-                "version": "1.0.0",
-                "type": "wordpress-plugin",
-                "dist": {
-                    "type": "path",
-                    "url": "./plugins/mc4wp-premium"
+            "package": [
+                {
+                    "name": "ibericode/mc4wp-premium",
+                    "version": "1.0.0",
+                    "type": "wordpress-plugin",
+                    "dist": {
+                        "type": "path",
+                        "url": "plugins/mc4wp-premium"
+                    }
+                },
+                {
+                    "name": "ibericode/html-forms-premium",
+                    "version": "1.0.0",
+                    "type": "wordpress-plugin",
+                    "dist": {
+                        "type": "path",
+                        "url": "plugins/html-forms-premium"
+                    }
                 }
-            }
+            ]
+        },
+        {
+            "type": "path",
+            "url": "plugins/koko-analytics"
+        },
+        {
+            "type": "path",
+            "url": "plugins/mailchimp-for-wordpress"
+        },
+        {
+            "type": "path",
+            "url": "plugins/mailchimp-top-bar"
+        },
+        {
+            "type": "path",
+            "url": "plugins/mailchimp-top-bar"
+        },
+        {
+            "type": "path",
+            "url": "plugins/html-forms"
         }
     ],
     "require": {
         "wp-cli/wp-cli-bundle": "*",
         "roots/wordpress": "^5.0",
         "composer/installers": "^1.9",
-        "ibericode/mc4wp-premium": "^1.0"
+        "ibericode/mc4wp-premium": "^1.0",
+        "wpackagist-plugin/query-monitor": "^3.5",
+        "ibericode/koko-analytics": "dev-master",
+        "ibericode/mailchimp-for-wordpress": "dev-master",
+        "dannyvankooten/wp-mailchimp-top-bar": "dev-master",
+        "ibericode/html-forms": "dev-master",
+        "ibericode/html-forms-premium": "^1.0"
     },
     "extra": {
         "wordpress-install-dir": "www",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3cc2a7f1e7f5cfae50923f7f7717b83b",
+    "content-hash": "6dc4ce3ff713e490846130a6938256e7",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -515,6 +515,38 @@
             "time": "2019-08-29T20:11:49+00:00"
         },
         {
+            "name": "dannyvankooten/wp-mailchimp-top-bar",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "plugins/mailchimp-top-bar",
+                "reference": "a6f0472fb47a950940d428d24bdbe584da6ab698"
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Danny van Kooten",
+                    "email": "hi@dannyvankooten.com",
+                    "homepage": "https://dannyvankooten.com"
+                }
+            ],
+            "description": "Adds a opt-in bar to the top of your site.",
+            "homepage": "https://wordpress.org/plugins/mailchimp-top-bar/",
+            "keywords": [
+                "mailchimp",
+                "wordpress"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "gettext/gettext",
             "version": "v4.8.2",
             "source": {
@@ -636,6 +668,197 @@
                 "unicode"
             ],
             "time": "2019-11-13T10:30:21+00:00"
+        },
+        {
+            "name": "ibericode/html-forms",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "plugins/html-forms",
+                "reference": "01adbe6483d835b78591fd1393fe0776efd44913"
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "brain/monkey": "^2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "phpunit/phpunit": "^6.5",
+                "wp-coding-standards/wpcs": "^2.1"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ],
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit --coverage-text"
+                ],
+                "cs": [
+                    "vendor/bin/phpcs -n -s"
+                ]
+            },
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Danny van Kooten",
+                    "homepage": "http://dvk.co"
+                }
+            ],
+            "description": "Fast & flexible forms for your WordPress site.",
+            "homepage": "https://github.com/ibericode/html-forms",
+            "keywords": [
+                "contact form",
+                "form",
+                "wordpress"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "ibericode/html-forms-premium",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "plugins/html-forms-premium"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "ibericode/koko-analytics",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "plugins/koko-analytics",
+                "reference": "7dc087a3ef68e4db59740843cdc1898337c2e777"
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "phpunit/phpunit": "^8.4",
+                "wp-coding-standards/wpcs": "^2.1"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "scripts": {
+                "test": [
+                    "./vendor/bin/phpunit --bootstrap vendor/autoload.php tests/"
+                ],
+                "codestyle": [
+                    "./vendor/bin/phpcs -n -s"
+                ],
+                "codestyle-fix": [
+                    "./vendor/bin/phpcbf"
+                ]
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Danny van Kooten",
+                    "email": "hi@dannyvankooten.com",
+                    "homepage": "https://dannyvankooten.com"
+                }
+            ],
+            "description": "Privacy-friendly analytics for your WordPress site",
+            "homepage": "https://wordpress.org/plugins/koko-analytics/",
+            "keywords": [
+                "analytics",
+                "statistics",
+                "wordpress"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "ibericode/mailchimp-for-wordpress",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "plugins/mailchimp-for-wordpress",
+                "reference": "909baef33e5cea7bcceea57eb71b6d30255aa97b"
+            },
+            "require": {
+                "php": ">=5.2.14",
+                "xrstf/composer-php52": "1.*"
+            },
+            "require-dev": {
+                "brain/monkey": "^2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "phpunit/phpunit": "^7.5",
+                "wp-coding-standards/wpcs": "^2.1"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "classmap": [
+                    "includes/",
+                    "integrations/"
+                ],
+                "files": [
+                    "includes/functions.php",
+                    "includes/deprecated-functions.php",
+                    "includes/forms/functions.php",
+                    "includes/forms/admin-functions.php",
+                    "includes/integrations/functions.php"
+                ]
+            },
+            "scripts": {
+                "post-install-cmd": [
+                    "xrstf\\Composer52\\Generator::onPostInstallCmd"
+                ],
+                "post-update-cmd": [
+                    "xrstf\\Composer52\\Generator::onPostInstallCmd"
+                ],
+                "post-autoload-dump": [
+                    "xrstf\\Composer52\\Generator::onPostInstallCmd"
+                ],
+                "test": [
+                    "./vendor/bin/phpunit tests/"
+                ],
+                "codestyle": [
+                    "./vendor/bin/phpcs -n -s"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Danny van Kooten",
+                    "email": "hi@dannyvankooten.com",
+                    "homepage": "https://dannyvankooten.com"
+                }
+            ],
+            "description": "Mailchimp plugin for WordPress",
+            "homepage": "https://www.mc4wp.com/",
+            "keywords": [
+                "mailchimp",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/ibericode/mailchimp-for-wordpress/issues",
+                "forum": "https://wordpress.org/support/plugin/mailchimp-for-wp",
+                "source": "https://github.com/ibericode/mailchimp-for-wordpress"
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "ibericode/mc4wp-premium",
@@ -3711,12 +3934,66 @@
             ],
             "description": "Programmatically edit a wp-config.php file.",
             "time": "2019-07-23T17:24:43+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/query-monitor",
+            "version": "3.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/query-monitor/",
+                "reference": "tags/3.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.5.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/query-monitor/"
+        },
+        {
+            "name": "xrstf/composer-php52",
+            "version": "v1.0.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer-php52/composer-php52.git",
+                "reference": "bd41459d5e27df8d33057842b32377c39e97a5a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer-php52/composer-php52/zipball/bd41459d5e27df8d33057842b32377c39e97a5a8",
+                "reference": "bd41459d5e27df8d33057842b32377c39e97a5a8",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-default": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "xrstf\\Composer52": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2016-04-16T21:52:24+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "ibericode/koko-analytics": 20,
+        "ibericode/mailchimp-for-wordpress": 20,
+        "dannyvankooten/wp-mailchimp-top-bar": 20,
+        "ibericode/html-forms": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
