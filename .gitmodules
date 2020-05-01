@@ -1,0 +1,3 @@
+[submodule "plugins/mc4wp-premium"]
+	path = plugins/mc4wp-premium
+	url = git@github.com:dannyvankooten/mc4wp-premium.git
