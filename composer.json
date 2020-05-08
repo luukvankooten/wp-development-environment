@@ -59,7 +59,8 @@
         "ibericode/mailchimp-for-wordpress": "dev-master",
         "dannyvankooten/wp-mailchimp-top-bar": "dev-master",
         "ibericode/html-forms": "dev-master",
-        "ibericode/html-forms-premium": "^1.0"
+        "ibericode/html-forms-premium": "^1.0",
+        "wpackagist-plugin/woocommerce": "^4.1"
     },
     "extra": {
         "wordpress-install-dir": "www",

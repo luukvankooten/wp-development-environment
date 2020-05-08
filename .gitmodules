@@ -16,3 +16,6 @@
 [submodule "plugins/html-forms-premium"]
 	path = plugins/html-forms-premium
 	url = git@github.com:dannyvankooten/html-forms-premium.git
+[submodule "plugins/wp-snippets"]
+	path = plugins/wp-snippets
+	url = git@github.com:luukvankooten/wp-snippets.git
