@@ -47,6 +47,10 @@
         {
             "type": "path",
             "url": "plugins/html-forms"
+        },
+        {
+            "type": "path",
+            "url": "plugins/wp-snippets"
         }
     ],
     "require": {
@@ -60,7 +64,8 @@
         "dannyvankooten/wp-mailchimp-top-bar": "dev-master",
         "ibericode/html-forms": "dev-master",
         "ibericode/html-forms-premium": "^1.0",
-        "wpackagist-plugin/woocommerce": "^4.1"
+        "wpackagist-plugin/woocommerce": "^4.1",
+        "luuk/wp-snippets": "dev-master"
     },
     "extra": {
         "wordpress-install-dir": "www",

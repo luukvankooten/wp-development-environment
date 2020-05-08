@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ecd172cefee1fee93b7bbda5c596592",
+    "content-hash": "231b3cba5fe5daaee03d77db6d6f92ba",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -934,6 +934,29 @@
                 "schema"
             ],
             "time": "2019-09-25T14:49:45+00:00"
+        },
+        {
+            "name": "luuk/wp-snippets",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "plugins/wp-snippets",
+                "reference": "48b009b111ea3541332f06749eb0435afeb81181"
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luuk van Kooten",
+                    "email": "luukvankooten@gmail.com"
+                }
+            ],
+            "description": "Test wordpress snippets in wordpress",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "mck89/peast",
@@ -4010,7 +4033,8 @@
         "ibericode/koko-analytics": 20,
         "ibericode/mailchimp-for-wordpress": 20,
         "dannyvankooten/wp-mailchimp-top-bar": 20,
-        "ibericode/html-forms": 20
+        "ibericode/html-forms": 20,
+        "luuk/wp-snippets": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
