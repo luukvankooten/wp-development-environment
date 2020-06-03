@@ -10,22 +10,22 @@
             "package": [
                 {
                     "name": "ibericode/mc4wp-premium",
-                    "version": "1.0.0",
+                    "version": "dev-master",
                     "type": "wordpress-plugin",
                     "dist": {
                         "type": "path",
                         "url": "app/plugins/mc4wp-premium"
                     }
+                },
+                {
+                    "name": "ibericode/html-forms-premium",
+                    "version": "dev-master",
+                    "type": "wordpress-plugin",
+                    "dist": {
+                        "type": "path",
+                        "url": "app/plugins/html-forms-premium"
+                    }
                 }
-//                {
-//                    "name": "ibericode/html-forms-premium",
-//                    "version": "1.0.0",
-//                    "type": "wordpress-plugin",
-//                    "dist": {
-//                        "type": "path",
-//                        "url": "app/plugins/html-forms-premium"
-//                    }
-//                }
             ]
         },
         {
@@ -57,13 +57,13 @@
         "wp-cli/wp-cli-bundle": "*",
         "roots/wordpress": "^5.0",
         "composer/installers": "^1.9",
-        "ibericode/mc4wp-premium": "^1.0",
+        "ibericode/mc4wp-premium": "dev-master",
         "wpackagist-plugin/query-monitor": "^3.5",
-        "ibericode/koko-analytics": "dev-master",
+        "ibericode/koko-analytics": "dev-master@dev",
         "ibericode/mailchimp-for-wordpress": "dev-master",
         "dannyvankooten/wp-mailchimp-top-bar": "dev-master",
         "ibericode/html-forms": "dev-master",
-        "ibericode/html-forms-premium": "^1.0",
+        "ibericode/html-forms-premium": "dev-master",
         "wpackagist-plugin/woocommerce": "^4.1",
         "luuk/wp-snippets": "dev-master",
         "wp-cli/wp-cli": "^2.4",
