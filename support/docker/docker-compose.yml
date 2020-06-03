@@ -1,0 +1,28 @@
+version: '3'
+services:
+  wordpress:
+    depends_on:
+      - db
+    build: .
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - www:/project
+
+  db:
+    image: mysql:5
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+volumes:
+  www:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/www
+      o: bind

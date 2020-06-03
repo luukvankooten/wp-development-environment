@@ -30,12 +30,6 @@ cd /home/vagrant/code/ || exit
 
 composer install;
 
-vendor/bin/wp core config \
-  --path=./www \
-  --dbname=wordpress \
-  --dbuser=homestead \
-  --dbpass=secret
-
 vendor/bin/wp core install \
   --path=./www \
   --url=ibericode.wp.test \

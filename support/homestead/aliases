@@ -12,6 +12,8 @@ alias serve=serve-laravel
 
 alias xoff='sudo phpdismod -s cli xdebug'
 alias xon='sudo phpenmod -s cli xdebug'
+export XDEBUG_CONFIG="remote_enable=1 remote_mode=req remote_port=9000 remote_host=10.0.2.2 remote_connect_back=0"
+export PHP_IDE_CONFIG="serverName=ibericode.wp.test"
 
 function artisan() {
     php artisan "$@"

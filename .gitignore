@@ -1,4 +1,6 @@
-.idea
 .vagrant
 vendor
 www
+.env
+*.dump.sql
+composer.lock
