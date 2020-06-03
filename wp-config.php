@@ -80,7 +80,7 @@ define( 'SCRIPT_DEBUG', getenv( 'SCRIPT_DEBUG' ) ?: false );
  */
 $table_prefix = getenv( 'DB_PREFIX' ) ?: 'wp_';
 
-define( 'UPLOADS', '../app/uploads' );
+define( 'UPLOADS', '../app/uploads/' );
 
 /* That's all, stop editing! Happy publishing. */
 

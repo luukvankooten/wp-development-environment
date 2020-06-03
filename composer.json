@@ -66,7 +66,6 @@
         "ibericode/html-forms-premium": "dev-master",
         "wpackagist-plugin/woocommerce": "^4.1",
         "luuk/wp-snippets": "dev-master",
-        "wp-cli/wp-cli": "^2.4",
         "wpackagist-plugin/mailpoet": "^3.47",
         "vlucas/phpdotenv": "^4.1"
     },
