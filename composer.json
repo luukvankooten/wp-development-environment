@@ -1,9 +1,9 @@
 {
     "type": "project",
-    "repositories":[
+    "repositories": [
         {
-            "type":"composer",
-            "url":"https://wpackagist.org"
+            "type": "composer",
+            "url": "https://wpackagist.org"
         },
         {
             "type": "package",
@@ -14,43 +14,43 @@
                     "type": "wordpress-plugin",
                     "dist": {
                         "type": "path",
-                        "url": "plugins/mc4wp-premium"
-                    }
-                },
-                {
-                    "name": "ibericode/html-forms-premium",
-                    "version": "1.0.0",
-                    "type": "wordpress-plugin",
-                    "dist": {
-                        "type": "path",
-                        "url": "plugins/html-forms-premium"
+                        "url": "app/plugins/mc4wp-premium"
                     }
                 }
+//                {
+//                    "name": "ibericode/html-forms-premium",
+//                    "version": "1.0.0",
+//                    "type": "wordpress-plugin",
+//                    "dist": {
+//                        "type": "path",
+//                        "url": "app/plugins/html-forms-premium"
+//                    }
+//                }
             ]
         },
         {
             "type": "path",
-            "url": "plugins/koko-analytics"
+            "url": "app/plugins/koko-analytics"
         },
         {
             "type": "path",
-            "url": "plugins/mailchimp-for-wordpress"
+            "url": "app/plugins/mailchimp-for-wordpress"
         },
         {
             "type": "path",
-            "url": "plugins/mailchimp-top-bar"
+            "url": "app/plugins/mailchimp-top-bar"
         },
         {
             "type": "path",
-            "url": "plugins/mailchimp-top-bar"
+            "url": "app/plugins/mailchimp-top-bar"
         },
         {
             "type": "path",
-            "url": "plugins/html-forms"
+            "url": "app/plugins/html-forms"
         },
         {
             "type": "path",
-            "url": "plugins/wp-snippets"
+            "url": "app/plugins/wp-snippets"
         }
     ],
     "require": {
@@ -65,13 +65,20 @@
         "ibericode/html-forms": "dev-master",
         "ibericode/html-forms-premium": "^1.0",
         "wpackagist-plugin/woocommerce": "^4.1",
-        "luuk/wp-snippets": "dev-master"
+        "luuk/wp-snippets": "dev-master",
+        "wp-cli/wp-cli": "^2.4",
+        "wpackagist-plugin/mailpoet": "^3.47",
+        "vlucas/phpdotenv": "^4.1"
     },
     "extra": {
         "wordpress-install-dir": "www",
         "installer-paths": {
-            "www/wp-content/themes/{$name}": ["type:wordpress-theme"],
-            "www/wp-content/plugins/{$name}": ["type:wordpress-plugin"]
+            "www/wp-content/themes/{$name}": [
+                "type:wordpress-theme"
+            ],
+            "www/wp-content/plugins/{$name}": [
+                "type:wordpress-plugin"
+            ]
         }
     }
 }
