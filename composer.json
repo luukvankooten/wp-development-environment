@@ -66,8 +66,8 @@
         "ibericode/html-forms-premium": "dev-master",
         "wpackagist-plugin/woocommerce": "^4.1",
         "luuk/wp-snippets": "dev-master",
-        "wpackagist-plugin/mailpoet": "^3.47",
-        "vlucas/phpdotenv": "^4.1"
+        "vlucas/phpdotenv": "^4.1",
+        "wpackagist-plugin/mailpoet": "^3.47"
     },
     "extra": {
         "wordpress-install-dir": "www",
@@ -79,5 +79,8 @@
                 "type:wordpress-plugin"
             ]
         }
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.1"
     }
 }

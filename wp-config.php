@@ -1,10 +1,8 @@
 <?php
-
 /**
  * Bootstrap some common things
  */
 ( function () {
-
 	require __DIR__ . '/vendor/autoload.php';
 
 	$dotenv = Dotenv\Dotenv::createImmutable( __DIR__ );
@@ -34,8 +32,6 @@
 /** The name of the database for WordPress */
 define( 'DB_NAME', getenv( 'DB_NAME' ) );
 
-define( 'WP_DEBUG', getenv( 'WP_DEBUG' ) ?: false );
-
 /** MySQL database username */
 define( 'DB_USER', getenv( 'DB_USER' ) );
 
@@ -46,10 +42,14 @@ define( 'DB_PASSWORD', getenv( 'DB_PASSWORD' ) );
 define( 'DB_HOST', getenv( 'DB_HOST' ) );
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', getenv( 'DB_CHARSET' ) );
+define( 'DB_CHARSET', getenv( 'DB_CHARSET' ) ?: 'utf8' );
 
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', getenv( 'DB_COLLATE' ) ?: '' );
+define( 'DB_COLLATE', getenv( 'DB_COLLATE' ) ?: 'utf8_general_ci' );
+
+define( 'WP_LOCAL_DEV', true );
+
+define( 'QM_ENABLE_CAPS_PANEL', true );
 
 /**
  * Authentication Unique Keys and Salts.
@@ -69,9 +69,18 @@ define( 'SECURE_AUTH_SALT', getenv( 'SECURE_AUTH_SALT' ) ?: '' );
 define( 'LOGGED_IN_SALT', getenv( 'LOGGED_IN_SALT' ) ?: '' );
 define( 'NONCE_SALT', getenv( 'NONCE_SALT' ) ?: '' );
 define( 'WP_CACHE_KEY_SALT', getenv( 'WP_CACHE_KEY_SALT' ) ?: '' );
-define( 'DISABLE_WP_CRON', getenv( 'DISABLE_WP_CRON' ) ?: false );
-define( 'SCRIPT_DEBUG', getenv( 'SCRIPT_DEBUG' ) ?: false );
 
+$debug =  (bool) getenv( 'WP_DEBUG' ) ?: false;
+
+define( 'WP_DEBUG', $debug );
+define( 'WP_DEBUG_LOG', $debug );
+
+define( 'DISABLE_WP_CRON', (bool) getenv( 'DISABLE_WP_CRON' ) ?: false );
+define( 'SCRIPT_DEBUG', (bool) getenv( 'SCRIPT_DEBUG' ) ?: false );
+
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+	define( 'WP_SITEURL', $_SERVER['HTTP_ORIGIN']);
+}
 /**
  * WordPress Database Table prefix.
  *
@@ -79,8 +88,6 @@ define( 'SCRIPT_DEBUG', getenv( 'SCRIPT_DEBUG' ) ?: false );
  * a unique prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix = getenv( 'DB_PREFIX' ) ?: 'wp_';
-
-define( 'UPLOADS', '../app/uploads/' );
 
 /* That's all, stop editing! Happy publishing. */
 
