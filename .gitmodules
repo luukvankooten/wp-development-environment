@@ -1,21 +1,28 @@
 [submodule "plugins/mc4wp-premium"]
 	path = app/plugins/mc4wp-premium
 	url = git@github.com:dannyvankooten/mc4wp-premium.git
+	ignore = all
 [submodule "plugins/mailchimp-for-wordpress"]
 	path = app/plugins/mailchimp-for-wordpress
 	url = git@github.com:ibericode/mailchimp-for-wordpress.git
+	ignore = all
 [submodule "plugins/koko-analytics"]
 	path = app/plugins/koko-analytics
 	url = git@github.com:ibericode/koko-analytics.git
+	ignore = all
 [submodule "plugins/mailchimp-top-bar"]
 	path = app/plugins/mailchimp-top-bar
 	url = git@github.com:ibericode/mailchimp-top-bar.git
+	ignore = all
 [submodule "plugins/html-forms"]
 	path = app/plugins/html-forms
 	url = git@github.com:ibericode/html-forms.git
+	ignore = all
 [submodule "plugins/html-forms-premium"]
 	path = app/plugins/html-forms-premium
 	url = git@github.com:dannyvankooten/html-forms-premium.git
+	ignore = all
 [submodule "plugins/wp-snippets"]
 	path = app/plugins/wp-snippets
 	url = git@github.com:luukvankooten/wp-snippets.git
+	ignore = all
