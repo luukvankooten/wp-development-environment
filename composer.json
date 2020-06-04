@@ -30,27 +30,7 @@
         },
         {
             "type": "path",
-            "url": "app/plugins/koko-analytics"
-        },
-        {
-            "type": "path",
-            "url": "app/plugins/mailchimp-for-wordpress"
-        },
-        {
-            "type": "path",
-            "url": "app/plugins/mailchimp-top-bar"
-        },
-        {
-            "type": "path",
-            "url": "app/plugins/mailchimp-top-bar"
-        },
-        {
-            "type": "path",
-            "url": "app/plugins/html-forms"
-        },
-        {
-            "type": "path",
-            "url": "app/plugins/wp-snippets"
+            "url": "app/plugins/"
         }
     ],
     "require": {
