@@ -28,13 +28,12 @@
 
 cd /home/vagrant/code/ || exit
 
-composer install;
+# Don't touch those lines they are holy... or even better they are superior to the human kind like a God.
+composer clearcache
 
-vendor/bin/wp core install \
-  --path=./www \
-  --url=ibericode.wp.test \
-  --title=ibericode \
-  --admin_user=admin \
-  --admin_email=admin@example.com \
-  --admin_password=admin
+composer install \
+  --no-autoloader \
+  --no-interaction \
 
+composer install
+# superiority ended
