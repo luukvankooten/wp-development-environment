@@ -3,10 +3,12 @@
  * Bootstrap some common things
  */
 ( function () {
-	require __DIR__ . '/vendor/autoload.php';
+	$loader = require __DIR__ . '/vendor/autoload.php';
 
 	$dotenv = Dotenv\Dotenv::createImmutable( __DIR__ );
 	$dotenv->load();
+
+	// $loader->unregister();
 } )();
 
 /**
@@ -72,15 +74,20 @@ define( 'WP_CACHE_KEY_SALT', getenv( 'WP_CACHE_KEY_SALT' ) ?: '' );
 
 $debug =  (bool) getenv( 'WP_DEBUG' ) ?: false;
 
-define( 'WP_DEBUG', $debug );
-define( 'WP_DEBUG_LOG', $debug );
+if ( $debug ) {
+	define( 'WP_DEBUG', true );
+	define( 'WP_DEBUG_LOG', true );
+	define( 'SCRIPT_DEBUG', true );
+	define('WP_CACHE', false);
+
+	if (! defined('WP_LOCAL_DEV')) {
+		define( 'WP_LOCAL_DEV', true );
+	}
+}
+    
 
 define( 'DISABLE_WP_CRON', (bool) getenv( 'DISABLE_WP_CRON' ) ?: false );
-define( 'SCRIPT_DEBUG', (bool) getenv( 'SCRIPT_DEBUG' ) ?: false );
-
-if (isset($_SERVER['HTTP_ORIGIN'])) {
-	define( 'WP_SITEURL', $_SERVER['HTTP_ORIGIN']);
-}
+// define( 'WP_SITEURL', 'http://0.0.0.0:5000');
 /**
  * WordPress Database Table prefix.
  *
