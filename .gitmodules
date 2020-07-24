@@ -26,3 +26,10 @@
 	path = app/plugins/wp-snippets
 	url = git@github.com:luukvankooten/wp-snippets.git
 	ignore = all
+[submodule "app/plugins/unofficial-convertkit"]
+	path = app/plugins/unofficial-convertkit
+	url = git@github.com:ibericode/unofficial-convertkit.git
+	ignore = all
+[submodule "app/plugins/unofficial-convertkit-premium"]
+	path = app/plugins/unofficial-convertkit-premium
+	url = git@github.com:dannyvankooten/unofficial-convertkit-premium.git
