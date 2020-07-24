@@ -3,17 +3,19 @@ memory: 2048
 cpus: 2
 provider: virtualbox
 authorize: ~/.ssh/id_rsa.pub
+ssl: true
 keys:
     - ~/.ssh/id_rsa
 folders:
     -
         map: ../../
         to: /home/vagrant/code
+        type: "nfs"
+
 sites:
     -
         map: ibericode.wp.test
         to: /home/vagrant/code/www
-        php: "7.3"
 databases:
     - wordpress
 features:
