@@ -33,3 +33,4 @@
 [submodule "app/plugins/unofficial-convertkit-premium"]
 	path = app/plugins/unofficial-convertkit-premium
 	url = git@github.com:dannyvankooten/unofficial-convertkit-premium.git
+	ignore = all
